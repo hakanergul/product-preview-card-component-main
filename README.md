@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution Url](https://github.com/hakanergul/nft-preview-card-component-main)
-- Live Site URL: [Live Site](https://idyllic-salamander-acd54b.netlify.app/)
+- Solution URL: [Solution Url](https://www.frontendmentor.io/solutions/flexbox-media-queries-sass-R98HEyrbVT)
+- Live Site URL: [Live Site](https://glittering-arithmetic-ebf33a.netlify.app/)
 
 ## My process
 
