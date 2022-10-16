@@ -27,7 +27,8 @@ a {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .container .col:first-child {
-  width: 300px;
+  height: 100%;
+  width: 50%;
 }
 .container .col img {
   height: 100%;
@@ -37,49 +38,50 @@ a {
 .container .col:last-child {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  padding: 32px;
+  justify-content: space-between;
+  height: calc(100% - 4rem);
+  width: calc(50% - 4rem);
+  padding: 2rem;
 }
 .container .col span {
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 0.31rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: hsl(228deg, 12%, 48%);
 }
 .container .col h1 {
   font-family: "Fraunces", serif;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 2rem;
+  line-height: 2rem;
   color: hsl(212deg, 21%, 14%);
 }
 .container .col p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 23px;
+  font-size: 0.87rem;
+  line-height: 1.43rem;
   color: hsl(228deg, 12%, 48%);
 }
 .container .col .row:nth-last-child(2) {
   display: flex;
-  gap: 19px;
+  gap: 1.18rem;
   align-items: center;
 }
 
 .price-active {
   font-family: "Fraunces", serif;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 2rem;
   color: hsl(158deg, 36%, 37%);
 }
 
 .price-passive {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 0.81rem;
   color: hsl(228deg, 12%, 48%);
   text-decoration: line-through;
 }
@@ -91,7 +93,7 @@ a {
   border-radius: 8px;
   background-color: hsl(158deg, 36%, 37%);
   width: 100%;
-  height: 40px;
+  height: 2.5rem;
 }
 .btn:hover {
   background-color: #1A4032;
@@ -100,17 +102,62 @@ a {
 .btn-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 0.87rem;
+  line-height: 2rem;
   color: hsl(0deg, 0%, 100%);
   text-align: center;
 }
 .btn-link::before {
   content: url("./images/icon-cart.svg");
-  margin-right: 11px;
+  margin-right: 0.77rem;
   padding: 0;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (max-width: 610px) {
+  :root {
+    font-size: 14px;
+  }
+  .container {
+    height: 60vh;
+    width: 80vw;
+  }
+  .container .col:first-child {
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+  }
+  .container .col:last-child {
+    height: calc(100% - 2rem);
+    width: calc(50% - 2rem);
+  }
+}
+@media (max-width: 415px) {
+  :root {
+    font-size: 16px;
+  }
+  .container {
+    height: calc(100vh - 56px);
+    width: calc(100vw - 32px);
+    margin: 28px 16px;
+    flex-direction: column;
+  }
+  .container .col:first-child {
+    height: 46.16%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .container .col:first-child img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+  }
+  .container .col:last-child {
+    height: calc(60% - 48px);
+    width: calc(100% - 48px);
+    padding: 24px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
